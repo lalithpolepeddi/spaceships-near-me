@@ -41,9 +41,26 @@ var app = {
 
   onLocationFound: function(position) {
     app.map.setView([position.coords.latitude, position.coords.longitude], 14);
+    app.loadSightingsNearMe(position.coords.latitude, position.coords.longitude);
   },
 
   onLocationError: function(error) {
     app.map.setView([37.7749295,-122.4194155], 14);
+    app.loadSightingsNearMe(37.7749295,-122.4194155);
+  },
+  
+  loadSightingsNearMe: function(lat, lng) {
+    var sightingsAPI = "http://guarded-fjord-5986.herokuapp.com/sightings/";
+    $.getJSON(sightingsAPI, {
+      location: lat + ',' + lng,
+      radius: '150',
+      limit: 250
+    })
+    .done(function(data) {
+      $.each(data.items, function(i, item) {
+        L.marker([item.lat, item.lng]).addTo(app.map)
+         .bindPopup('<p class="date">' + item.sighted_at + '</p><p class="location">' + item.location + '</p><p class="description">' + item.description + '</p>');       
+      });
+    });
   }
 };

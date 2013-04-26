@@ -7,3 +7,16 @@ html, body, #map {
   height: 100%;
   width: 100%;
 }
+
+p {
+  margin: 10px 0;
+}
+
+.date {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.location {
+  font-style: italic;
+}
