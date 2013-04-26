@@ -28,4 +28,4 @@ $ git checkout 01_fullscreen_map
 ## Using the GitHub branch menu
 Alternatively, you can use GitHub's web interface to view each checkpoint. Click on the branch menu and select the checkpoint you want to view, shown below:
 
-![GitHub Branch Menu](https://raw.github.com/cuttarug/sightings/master/branch-menu.png)
+![GitHub Branch Menu](https://raw.github.com/cuttarug/spaceships-near-me/master/www/img/branch-menu.png)
