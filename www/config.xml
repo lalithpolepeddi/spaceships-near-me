@@ -6,7 +6,7 @@
         id        = "com.phonegap.hello-world"
         version   = "1.0.0">
 
-  <name>Spacships Near Me</name>
+  <name>Spaceships Near Me</name>
 
   <description>
     Sample application for "Deploying Flask to Heroku and Creating an Android App with PhoneGap" on Tech.Pro.
